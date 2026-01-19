@@ -7,6 +7,8 @@
 using namespace std;
 
 
+// bhai index store karna taki duplicate wali issue na aaye.
+
 vector<int> solve(vector<int> &nums) {
 
     stack<int> st;

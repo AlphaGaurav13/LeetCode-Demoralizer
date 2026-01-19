@@ -8,6 +8,9 @@ using namespace std;
 // GCD is use to calculate the greatest comman divisor max number which can divide both the numbers. we can also find the lcm
 // with the help of gcd formula lcm(a,b) = (a * b) / gcd(a,b);
 
+
+// key points to remember -> divisor become dividend and remainder become divisor until remainder become 0.
+
 int gcd(int a, int b) {
     if(b == 0) {
         return a;

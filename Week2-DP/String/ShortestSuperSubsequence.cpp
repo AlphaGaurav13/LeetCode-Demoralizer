@@ -21,7 +21,7 @@ int main() {
         }
     }
 
-    cout << n + m -  dp[n][m] << endl; 
+    cout << n + m -  dp[n][m] << endl; // means n -> string1 ke sare element + m(string2 ke sarre elements) - (common Elements hata do) which is the length of lcs
 
     return 0;
 }

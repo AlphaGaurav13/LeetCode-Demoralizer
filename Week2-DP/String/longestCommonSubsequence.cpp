@@ -17,13 +17,14 @@ int main() {
             if(s1[i - 1] == s2[j - 1]) {
                 dp[i][j] = 1 + dp[i - 1][j - 1];
             }else {
-                dp[i][j] = max(dp[i - 1][j], dp[i][]j - 1);
+                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
             }
         }
     }
 
 
-    return dp[n][m];
+    cout << dp[n][m] << endl;
+
 
 
     return 0;

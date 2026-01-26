@@ -57,8 +57,10 @@ int main() {
         j--;
     }
 
+
     reverse(ans.begin(), ans.end());
     cout << ans << endl;
+    cout << ans.size() << endl;
  
     return 0;
 }

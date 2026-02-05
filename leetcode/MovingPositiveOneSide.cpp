@@ -17,8 +17,6 @@ void segIt(vector<int>&arr) {
 }
 
 int main() {
-
-
     vector<int> arr = {1,2,3,-1,-2,-3};
 
     segIt(arr);

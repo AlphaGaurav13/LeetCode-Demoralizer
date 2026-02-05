@@ -64,9 +64,13 @@ using namespace std;
 
     int main() {
 
-        vector<int> arr = {1, 2, 3};
-        int ans = maxSum(arr);
-        cout << ans << endl;
+        // vector<int> arr = {1, 2, 3};
+        // int ans = maxSum(arr);
+        // cout << ans << endl;
+
+        string s = "aabacbebebe";
+
+        cout << s.size() << endl;
 
         return  0;
     }

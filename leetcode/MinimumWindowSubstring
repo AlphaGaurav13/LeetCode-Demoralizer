@@ -1,0 +1,53 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int gs = -1;
+int ge = -1;
+
+
+void minWindow(string s, string t) {
+    int n = s.size();
+
+    int len = INT_MAX;
+    int si = 0, ei = 0, count = 0;
+    vector<int> freq(128, 0);
+
+    for(char ch : t) {
+        freq[ch]++;
+        count++;
+    }
+
+
+    while(ei < n) {
+        if(freq[s[ei++]]-- > 0) count--;
+
+        while(count == 0) {
+            if(ei - si < len) {
+                len = ei - si;
+                gs = si;
+                ge = ei;
+            }
+            if(freq[s[si++]]++  == 0) count++;
+        }
+    }
+
+    return;
+}
+
+int main() {
+
+    string s = "ADOBECODEBANC";
+    string t = "ABC";
+
+    minWindow(s, t);
+
+
+    // cout << gs << " " << ge << endl;
+    for(int i = gs; i <= ge; i++) {
+        cout << s[i] << "";
+    }
+
+
+    return 0;
+}

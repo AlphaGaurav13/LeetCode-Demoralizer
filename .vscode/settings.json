@@ -1,12 +1,13 @@
 {
-  "editor.suggest.enabled": false,
+  "editor.suggest.enabled": true,
+  "editor.snippetSuggestions": "top",
   "editor.quickSuggestions": {
     "comments": "off",
     "strings": "off",
     "other": "off"
   },
   "editor.suggestOnTriggerCharacters": false,
-  "editor.autoClosingBrackets": "never",
+  "editor.autoClosingBrackets": "always",
   "editor.autoClosingQuotes": "never",
   "editor.autoClosingDelete": "never",
   "editor.autoSurround": "never",
@@ -15,7 +16,8 @@
   "editor.wordBasedSuggestions": "off",
   "editor.parameterHints.enabled": false,
   "[cpp]": {
-    "editor.suggest.enabled": false,
+    "editor.suggest.enabled": true,
+    "editor.snippetSuggestions": "top",
     "editor.quickSuggestions": {
       "comments": "off",
       "strings": "off",
@@ -30,5 +32,6 @@
       "strings": "off",
       "other": "off"
     }
-  }
+  },
+  "C_Cpp.errorSquiggles": "disabled"
 }

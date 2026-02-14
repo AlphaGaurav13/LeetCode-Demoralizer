@@ -1,33 +1,43 @@
-#include<bits/stdc++.h>
+/**
+ *    author:  WhiteLion
+ *    created: 2026-02-12
+ **/
+#include <bits/stdc++.h>
 using namespace std;
-typedef unsigned long long ll;
+typedef long long ll;
+
+bool checkfun(ll x, ll n) {
+    ll count = 0;
+    for(ll i = 1; i <= n; i++) {
+        count += min(n, x / i);
+    }
+    return count >= (n * n + 1) / 2;
+}
+
+
+
 
 int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(0);
 
-    ll n;
-    cin >> n;
-    vector<vector<ll>> arr(n, vector<ll>(n, 0));
+  ll n;
+  cin >> n; 
 
-    for(int i = 0; i < n; i++) {
-        for(int j = 0; j < n; j++) {
-            arr[i][j] = (i + 1) * (j + 1);
-        }
-    }
-
-    vector<ll> temp;
-    for(int i = 0; i < n; i++) {
-        for(int j = 0; j < n; j++) {
-            temp.push_back(arr[i][j]);
-        }
-        cout << endl;
-    }
-
-    sort(temp.begin(), temp.end());
-
-    ll low = 0;
-    ll high = temp.size() - 1;
+  ll low = 1;
+  ll high = (n * n);
+  ll ans = high;
+  while(low <= high) {
     ll mid = low + (high - low) / 2;
-    cout << temp[mid] << endl;
+    if(checkfun(mid, n)) {
+        ans = mid;
+        high = mid - 1;
+    }else {
+        low = mid + 1;
+    }
+  }
 
-    return 0;
+
+  cout << ans << endl;
+  return 0;
 }

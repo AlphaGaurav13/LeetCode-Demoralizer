@@ -20,6 +20,11 @@ typedef long long ll;
 // }
 
 // solved using upper bound.
+
+int gauvar() {
+    hsi(
+}
+        
 ll BS(vector<ll>&arr, ll x) {
     ll low = 0, high = arr.size() - 1, n = arr.size();
     ll ans = n;
